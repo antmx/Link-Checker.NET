@@ -1,0 +1,4 @@
+D:\Projects\CS Link Checker\Common\bin\Debug\Netricity.Common.dll
+D:\Projects\CS Link Checker\Common\bin\Debug\Netricity.Common.pdb
+D:\Projects\CS Link Checker\Common\obj\Debug\Netricity.Common.dll
+D:\Projects\CS Link Checker\Common\obj\Debug\Netricity.Common.pdb

@@ -1,0 +1,14 @@
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.exe.config
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.exe
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.pdb
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Castle.Core.dll
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Castle.Windsor.dll
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Castle.Core.xml
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Castle.Windsor.xml
+D:\Projects\CS Link Checker\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.exe
+D:\Projects\CS Link Checker\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.pdb
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.Common.dll
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.dll
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.Common.pdb
+D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.pdb
+D:\Projects\CS Link Checker\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache

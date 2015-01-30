@@ -1,0 +1,11 @@
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\CoreTests.dll
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\CoreTests.pdb
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\Netricity.LinkChecker.Core.dll
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\nunit.framework.dll
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\Netricity.LinkChecker.Core.pdb
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\nunit.framework.xml
+D:\Projects\CS Link Checker\CoreTests\obj\Debug\CoreTests.csprojResolveAssemblyReference.cache
+D:\Projects\CS Link Checker\CoreTests\obj\Debug\CoreTests.dll
+D:\Projects\CS Link Checker\CoreTests\obj\Debug\CoreTests.pdb
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\Moq.dll
+D:\Projects\CS Link Checker\CoreTests\bin\Debug\Moq.xml
