@@ -12,3 +12,17 @@ D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.d
 D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.Common.pdb
 D:\Projects\CS Link Checker\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.pdb
 D:\Projects\CS Link Checker\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.exe.config
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.exe
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.LinkChecker.ConsoleClient.pdb
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Castle.Core.dll
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Castle.Windsor.dll
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.Common.dll
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.dll
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.Common.pdb
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Netricity.LinkChecker.Core.pdb
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Castle.Core.xml
+D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Castle.Windsor.xml
+D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.exe
+D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.pdb

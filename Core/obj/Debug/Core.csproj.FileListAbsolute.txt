@@ -9,3 +9,14 @@ D:\Projects\CS Link Checker\Core\bin\Debug\Castle.Core.xml
 D:\Projects\CS Link Checker\Core\bin\Debug\Castle.Windsor.xml
 D:\Projects\CS Link Checker\Core\obj\Debug\Netricity.LinkChecker.Core.dll
 D:\Projects\CS Link Checker\Core\obj\Debug\Netricity.LinkChecker.Core.pdb
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Netricity.LinkChecker.Core.dll
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Netricity.LinkChecker.Core.pdb
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Castle.Core.dll
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Castle.Windsor.dll
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Netricity.Common.dll
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Netricity.Common.pdb
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Castle.Core.xml
+D:\Projects\Link-Checker.NET\Core\bin\Debug\Castle.Windsor.xml
+D:\Projects\Link-Checker.NET\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\Projects\Link-Checker.NET\Core\obj\Debug\Netricity.LinkChecker.Core.dll
+D:\Projects\Link-Checker.NET\Core\obj\Debug\Netricity.LinkChecker.Core.pdb
