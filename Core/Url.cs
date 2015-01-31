@@ -8,15 +8,21 @@ namespace Netricity.LinkChecker.Core
 {
 	public class Url : IUrl
 	{
+		#region Constructors
+
 		public Url(string url)
 		{
 			this.Parse(url, null);
 		}
 
-		public Url(string url, string baseURL)
+		public Url(string url, string baseUrl)
 		{
-			this.Parse(url, baseURL);
+			this.Parse(url, baseUrl);
 		}
+
+		#endregion
+
+		#region Properties
 
 		public string Origin { get; set; }
 
@@ -42,14 +48,30 @@ namespace Netricity.LinkChecker.Core
 
 		public string Title { get; set; }
 
+		#endregion
+
+		#region Methods
+
 		public bool IsEqualTo(IUrl other, bool caseSensitive)
 		{
-			throw new NotImplementedException();
+			if (other == null)
+				return false;
+
+			if (caseSensitive)
+			{
+				return this.Href == other.Href;
+			}
+			else
+			{
+				return this.Href.ToLower() == other.Href.ToLower();
+			}
 		}
 
 		public void Parse(string url, string baseUrl)
 		{
 			throw new NotImplementedException();
 		}
+
+		#endregion
 	}
 }
