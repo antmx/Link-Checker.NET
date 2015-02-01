@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceLogTests.cs" />
+    <Compile Include="UrlTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

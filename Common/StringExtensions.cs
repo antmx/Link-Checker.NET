@@ -13,7 +13,7 @@ namespace Netricity.Common
 	/// </summary>
 	public static class StringExtensions
 	{
-		public static string GetValueOrDefault(this string str, string defaultStr, bool canBeWhitespaceOnly = false)
+		public static string GetValueOrDefault(this string str, string defaultStr="", bool canBeWhitespaceOnly = false)
 		{
 			if (HasValue(str, canBeWhitespaceOnly))
 				return str;

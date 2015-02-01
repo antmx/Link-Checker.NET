@@ -20,3 +20,5 @@ D:\Projects\Link-Checker.NET\CoreTests\bin\Debug\nunit.framework.xml
 D:\Projects\Link-Checker.NET\CoreTests\obj\Debug\CoreTests.csprojResolveAssemblyReference.cache
 D:\Projects\Link-Checker.NET\CoreTests\obj\Debug\CoreTests.dll
 D:\Projects\Link-Checker.NET\CoreTests\obj\Debug\CoreTests.pdb
+D:\Projects\Link-Checker.NET\CoreTests\bin\Debug\Netricity.Common.dll
+D:\Projects\Link-Checker.NET\CoreTests\bin\Debug\Netricity.Common.pdb

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Netricity.Common;
 
 namespace Netricity.LinkChecker.Core
 {
@@ -69,7 +71,36 @@ namespace Netricity.LinkChecker.Core
 
 		public void Parse(string url, string baseUrl)
 		{
-			throw new NotImplementedException();
+			url = Regex.Replace(url, @"^\s+|\s+$", string.Empty);
+			var match = Regex.Match(url, @"^([^:\/?#]+:)?(?:\/\/(?:([^:@\/?#]*)(?::([^:@\/?#]*))?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?");
+			var groups=new List<string>();
+
+			if (!match.Success)
+				throw new ApplicationException("url is not a valid url");
+
+			foreach (var group in match.Groups)
+			{
+				var groupValue = group.ToString();
+				groups.Add(groupValue);
+			}
+			
+			//var matchValues = new List<string>();
+
+			//do
+			//{
+			//	matchValues.Add(match.Value);
+			//	match = match.NextMatch();
+			//} while (match.Success);
+
+			var protocol = groups[1].GetValueOrDefault();
+			var username = groups[2].GetValueOrDefault();
+			var password = groups[3].GetValueOrDefault();
+			var host = groups[4].GetValueOrDefault();
+			var hostname = groups[5].GetValueOrDefault();
+			var port = groups[6].GetValueOrDefault();
+			var pathname = groups[7].GetValueOrDefault();
+			var search = groups[8].GetValueOrDefault();
+			var hash = groups[9].GetValueOrDefault();
 		}
 
 		#endregion
