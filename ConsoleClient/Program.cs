@@ -10,7 +10,7 @@ namespace Netricity.LinkChecker.ConsoleClient
 			// 3. "Resolve" the root service
 			var controller = Init();
 
-			controller.Start("http://www.breaks-in-summerland-tenerife.co.uk");
+			controller.Start("http://www.breaks-in-summerland-tenerife.co.uk", false);
 		}
 
 		private static IController Init()

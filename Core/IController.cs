@@ -4,7 +4,7 @@ namespace Netricity.LinkChecker.Core
 {
 	public interface IController
 	{
-		void Start(string url);
+		void Start(string url, bool caseSensitive);
 
 		IResourceLog ResourceLog { get; set; }
 

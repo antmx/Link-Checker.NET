@@ -11,17 +11,17 @@ namespace Netricity.LinkChecker.Core
 			this.Downloader = downloader;
 		}
 
-		public void Start(string startUrl)
+		public void Start(string startUrl, bool caseSensitive)
 		{
-			var url = new Url(startUrl);
-
+			var url = new Uri2(startUrl);
+			this.ResourceLog.CaseSensitive = caseSensitive;
 			this.ResourceLog.AddItem(url);
 
 
 		}
 
-		public IUrl StartUrl { get; set; }
-		
+		public Uri2 StartUrl { get; set; }
+
 		public IResourceLog ResourceLog { get; set; }
 
 		public IContentParser ContentParser { get; set; }
@@ -43,17 +43,7 @@ namespace Netricity.LinkChecker.Core
 			throw new NotImplementedException();
 		}
 
-		public int MaxProcesses
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+		public int MaxProcesses { get; set; }
 
 		public event EventHandler OnUpdate;
 	}

@@ -57,13 +57,16 @@
     <Compile Include="IContentParser.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IDownloader.cs" />
+    <Compile Include="IHttpClient.cs" />
     <Compile Include="IResource.cs" />
     <Compile Include="IResourceLog.cs" />
-    <Compile Include="IUri.cs" />
+    <Compile Include="IUri2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealHttpClient.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="ResourceLog.cs" />
-    <Compile Include="Url.cs" />
+    <Compile Include="ResourceStatusEnum.cs" />
+    <Compile Include="Uri2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

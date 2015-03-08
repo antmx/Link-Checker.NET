@@ -32,22 +32,41 @@ namespace CoreTests
 		public void AddItem_AddsTheItemToTheLog_WhenCalled()
 		{
 			var log = new ResourceLog(true);
-			var url = new Url("http://www.foo.com/Page.html");
+			var url = new Uri2("http://www.foo.com/Page.html");
 
 			log.AddItem(url);
-			//log.AddItem("http://www.foo.com/Page.html");
 
 			Assert.AreEqual(1, log.ItemCount);
 		}
 
-		//[Test]
-		//[Category("ResourceLog")]
-		//public void AddItem_Adds2ItemsThatOnlyDifferByCase_WhenCaseSensitive()
-		//{
-		//	var log = new ResourceLog(true);
+		[Test]
+		[Category("ResourceLog")]
+		public void AddItem_Adds2ItemsThatOnlyDifferByCase_WhenCaseSensitive()
+		{
+			var log = new ResourceLog(true);
 
-		//	log.AddItem("http://www.foo.com/Page.html");
-		//	log.AddItem("http://www.foo.com/Page.html");
-		//}
+			var urlA = new Uri2("http://www.foo.com/page.html");
+			var urlB = new Uri2("http://www.foo.com/Page.html");
+
+			log.AddItem(urlA);
+			log.AddItem(urlB);
+
+			Assert.AreEqual(2, log.ItemCount);
+		}
+
+		[Test]
+		[Category("ResourceLog")]
+		public void AddItem_Adds1ItemWhen2OnlyDifferByCase_WhenCaseInsensitive()
+		{
+			var log = new ResourceLog(false);
+
+			var urlA = new Uri2("http://www.foo.com/page.html");
+			var urlB = new Uri2("http://www.foo.com/Page.html");
+
+			log.AddItem(urlA);
+			log.AddItem(urlB);
+
+			Assert.AreEqual(1, log.ItemCount);
+		}
 	}
 }

@@ -6,9 +6,10 @@ namespace Netricity.LinkChecker.Core
 	{
 		#region Properties that come from the XHR and its response headers
 
-		IUrl Url { get; set; }
+		IUrl2 Url { get; set; }
 
-		string LogStatus { get; set; }
+		//string LogStatus { get; set; }
+		ResourceStatusEnum ResourceStatus { get; set; }
 
 		bool CaseSensitive { get; set; }
 

@@ -7,20 +7,30 @@ namespace Netricity.LinkChecker.Core
 	{
 		void Download(); // use async modifier on implementation
 
-		bool ProtocolSupport { get; }
+		bool IsSuccessHttpStatus(string httpStatus);
 
-		event EventHandler OnProgress;
+		bool IsProtocolSupported { get; }
 
-		event EventHandler OnLoad;
+		//event EventHandler OnProgress;
 
-		event EventHandler OnError;
+		//event EventHandler OnLoad;
 
-		event EventHandler OnTimeout;
+		//event EventHandler OnError;
 
-		event EventHandler OnLoadStart;
+		//event EventHandler OnTimeout;
 
-		event EventHandler OnAbort;
+		//event EventHandler OnLoadStart;
 
-		event EventHandler OnLoadEnd;
+		//event EventHandler OnAbort;
+
+		//event EventHandler OnLoadEnd;
+
+		Action<IResource> OnStart { get; set; }
+
+		Action<IResource> OnComplete { get; set; }
+
+		Action<IResource> OnError { get; set; }
+
+		Action<IResource> OnTimeout { get; set; }
 	}
 }

@@ -32,6 +32,11 @@ namespace CoreTests
 		[Category("Url")]
 		public void AllProperties_AreSet_WhenValidUrlAndBaseUrlPassedToCtor()
 		{
+			//var uBase = new Uri("http://www.test.com");
+			//var u2 = new Uri(uBase, "/test.htm");
+
+			//Assert.AreEqual("http://www.test.com/test.htm", u2.ToString());
+
 			var link = "bar?baz=qux#hash";
 			var baseUrl = "http://www.foo.com";
 

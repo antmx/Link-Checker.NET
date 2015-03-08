@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Netricity.LinkChecker.Core
 {
 	public class ResourceLog : IResourceLog
 	{
-		public ResourceLog(bool caseSensitive)
+		//public ResourceLog(bool caseSensitive)
+		public ResourceLog()
 		{
 			this.Items = new List<IResource>();
-			this.CaseSensitive = caseSensitive;
+			//this.CaseSensitive = caseSensitive;
 		}
 
 		public bool CaseSensitive { get; set; }
 
 		public ICollection<IResource> Items { get; set; }
 
-		public void AddItems(IEnumerable<IUrl> urls)
+		public void AddItems(IEnumerable<IUrl2> urls)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IResource AddItem(IUrl url)
+		public IResource AddItem(IUrl2 url)
 		{
 			if (url == null)
 				throw new ArgumentNullException("url");
@@ -52,9 +51,10 @@ namespace Netricity.LinkChecker.Core
 			throw new NotImplementedException();
 		}
 
-		public IResource FindItem(IUrl url)
+		public IResource FindItem(IUrl2 url)
 		{
 			var existing = this.Items
+				//.Where(r => r.Url.IsEqualTo(url, this.CaseSensitive))
 				.Where(r => r.Url.IsEqualTo(url, this.CaseSensitive))
 				.FirstOrDefault();
 
@@ -68,12 +68,18 @@ namespace Netricity.LinkChecker.Core
 
 		public int PendingCount
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				return Items.Count(r => r.ResourceStatus == ResourceStatusEnum.Pending);
+			}
 		}
 
 		public int CompletedCount
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				return Items.Count(r => r.ResourceStatus == ResourceStatusEnum.Completed);
+			}
 		}
 	}
 }

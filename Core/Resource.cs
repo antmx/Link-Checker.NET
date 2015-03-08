@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Netricity.LinkChecker.Core
 {
-	public class Resource:IResource
+	public class Resource : IResource
 	{
-		public Resource(IUrl url, bool caseSensitive)
+		public Resource(IUrl2 url, bool caseSensitive)
 		{
 			this.Url = url;
-			this.LogStatus = "pending"; // "in progress" | "complete" | "not found" | "timeout"
+			//this.LogStatus = "pending"; // "in progress" | "complete" | "not found" | "timeout"
+			this.ResourceStatus = ResourceStatusEnum.Pending; // "in progress" | "complete" | "not found" | "timeout"
 			this.CaseSensitive = caseSensitive;
 
 			// Define properties that come from the XHR and its response headers.
@@ -39,9 +37,10 @@ namespace Netricity.LinkChecker.Core
 			this.DateEnd = null;
 		}
 
-		public IUrl Url { get; set; }
+		public IUrl2 Url { get; set; }
 
-		public string LogStatus { get; set; }
+		//public string LogStatus { get; set; }
+		public ResourceStatusEnum ResourceStatus { get; set; }
 
 		public bool CaseSensitive { get; set; }
 

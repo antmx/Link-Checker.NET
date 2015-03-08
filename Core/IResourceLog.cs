@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Netricity.LinkChecker.Core
 {
@@ -12,13 +10,13 @@ namespace Netricity.LinkChecker.Core
 
 		ICollection<IResource> Items { get; set; }
 
-		IResource AddItem(IUrl url);
+		IResource AddItem(IUrl2 url);
 
-		void AddItems(IEnumerable<IUrl> urls);
+		void AddItems(IEnumerable<IUrl2> urls);
 
 		string FetchNextPendingUrl();
 
-		IResource FindItem(IUrl url);
+		IResource FindItem(IUrl2 url);
 
 		int ItemCount { get; }
 
