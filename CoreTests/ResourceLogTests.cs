@@ -13,7 +13,7 @@ namespace CoreTests
 		[Category("ResourceLog")]
 		public void ItemCount_EqualsZero_WhenNoItems()
 		{
-			var log = new ResourceLog(false);
+			var log = new ResourceLog();
 
 			Assert.IsTrue(log.ItemCount == 0);
 		}
@@ -22,7 +22,7 @@ namespace CoreTests
 		[Category("ResourceLog")]
 		public void PendingCount_EqualsZero_WhenNoItems()
 		{
-			var log = new ResourceLog(false);
+			var log = new ResourceLog();
 
 			Assert.IsTrue(log.PendingCount == 0);
 		}
@@ -31,7 +31,9 @@ namespace CoreTests
 		[Category("ResourceLog")]
 		public void AddItem_AddsTheItemToTheLog_WhenCalled()
 		{
-			var log = new ResourceLog(true);
+			var log = new ResourceLog();
+			log.CaseSensitive = true;
+
 			var url = new Uri2("http://www.foo.com/Page.html");
 
 			log.AddItem(url);
@@ -43,7 +45,8 @@ namespace CoreTests
 		[Category("ResourceLog")]
 		public void AddItem_Adds2ItemsThatOnlyDifferByCase_WhenCaseSensitive()
 		{
-			var log = new ResourceLog(true);
+			var log = new ResourceLog();
+			log.CaseSensitive = true;
 
 			var urlA = new Uri2("http://www.foo.com/page.html");
 			var urlB = new Uri2("http://www.foo.com/Page.html");
@@ -58,7 +61,7 @@ namespace CoreTests
 		[Category("ResourceLog")]
 		public void AddItem_Adds1ItemWhen2OnlyDifferByCase_WhenCaseInsensitive()
 		{
-			var log = new ResourceLog(false);
+			var log = new ResourceLog();
 
 			var urlA = new Uri2("http://www.foo.com/page.html");
 			var urlB = new Uri2("http://www.foo.com/Page.html");
