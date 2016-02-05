@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public interface IResourceLog
 	{
@@ -14,7 +14,7 @@ namespace Netricity.LinkChecker.Core
 
 		void AddItems(IEnumerable<IUrl2> urls);
 
-		string FetchNextPendingUrl();
+		IUrl2 FetchNextPendingUrl();
 
 		IResource FindItem(IUrl2 url);
 

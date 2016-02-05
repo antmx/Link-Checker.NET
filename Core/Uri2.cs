@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public class Uri2 : Uri, IUrl2
 	{

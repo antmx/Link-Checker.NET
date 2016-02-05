@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public interface IController
 	{
@@ -10,7 +10,7 @@ namespace Netricity.LinkChecker.Core
 
 		IContentParser ContentParser { get; set; }
 
-		IDownloader Downloader { get; set; }
+		IDownloaderFactory DownloaderFactory { get; set; }
 
 		void ProcessNext();
 

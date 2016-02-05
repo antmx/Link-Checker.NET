@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using Moq;
-using Netricity.LinkChecker.Core;
+using Netricity.Linkspector.Core;
 using NUnit;
 using NUnit.Framework;
 using System.Net.Http.Headers;
@@ -46,24 +46,25 @@ namespace CoreTests
 			var href = "http://example.org/test";
 			var fakeResponseHandler = new FakeResponseHandler();
 
-			fakeResponseHandler.AddResponse(
-				new Uri(href),
-				new HttpResponseMessage(HttpStatusCode.OK));
+         fakeResponseHandler.AddHtmlResponse(new Uri(href), HttpStatusCode.OK, "Foo content", 123456L);
 			
 			var url = new Uri2(href);
 			var resource = new Resource(url, false);
-			var downloader = new Downloader(fakeResponseHandler, resource);
+         var downloader = new Downloader(fakeResponseHandler);
 
-			var toAwait = new Task(downloader.Download);
+         //var toAwait = downloader.Download(resource);
+         //await toAwait;
 
-			await toAwait;
+         await downloader.Download(resource);
 
-			Assert.AreEqual("text/html", resource.ContentType);
+         Assert.AreEqual("Foo content", resource.Content);
+         Assert.AreEqual("text/html", resource.ContentType);
 			Assert.AreEqual("utf-8", resource.ContentEncoding);
+         Assert.AreEqual(123456L, resource.ContentLength);
 
-			//var result = downloader.IsProtocolSupported;
+         //var result = downloader.IsProtocolSupported;
 
-			//Assert.IsTrue(result);
-		}
+         //Assert.IsTrue(result);
+      }
 	}
 }

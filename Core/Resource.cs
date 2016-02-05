@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public class Resource : IResource
 	{
@@ -12,8 +12,9 @@ namespace Netricity.LinkChecker.Core
 			this.ResourceStatus = ResourceStatusEnum.Pending; // "in progress" | "complete" | "not found" | "timeout"
 			this.CaseSensitive = caseSensitive;
 
-			// Define properties that come from the XHR and its response headers.
-			this.ContentType = "";
+         // Define properties that come from the XHR and its response headers.
+         this.Content = "";
+         this.ContentType = "";
 			this.ContentLength = 0;
 			this.Server = "";
 			this.CacheControl = "";
@@ -44,9 +45,11 @@ namespace Netricity.LinkChecker.Core
 
 		public bool CaseSensitive { get; set; }
 
-		public string ContentType { get; set; }
+      public string Content { get; set; }
 
-		public int ContentLength { get; set; }
+      public string ContentType { get; set; }
+
+		public long ContentLength { get; set; }
 
 		public string ContentEncoding { get; set; }
 

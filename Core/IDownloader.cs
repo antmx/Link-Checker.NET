@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public interface IDownloader
 	{
-		void Download(); // use async modifier on implementation
-
-		bool IsSuccessHttpStatus(string httpStatus);
+      //void Download(); // use async modifier on implementation
+      Task Download(IResource resource); // use async modifier on implementation
+      
+      bool IsSuccessHttpStatus(string httpStatus);
 
 		bool IsProtocolSupported { get; }
 

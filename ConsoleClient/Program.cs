@@ -1,24 +1,25 @@
 ﻿using System;
-using Netricity.LinkChecker.Core;
+using Netricity.Linkspector.Core;
 
-namespace Netricity.LinkChecker.ConsoleClient
+namespace Netricity.Linkspector.ConsoleClient
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			// 3. "Resolve" the root service
-			var controller = Init();
+         var container = IocManager.Init();
 
-			controller.Start("http://www.breaks-in-summerland-tenerife.co.uk", false);
-		}
+         // 3. "Resolve" the root services
+         var resourceLog = container.Resolve<IResourceLog>();
+         var contentParser = container.Resolve<IContentParser>();
+         var httpMessageHandler = container.Resolve<IHttpMessageHandler>();
+         var downloaderFactory = container.Resolve<IDownloaderFactory>();
+         var downloader = downloaderFactory.Create(httpMessageHandler);
+         var controllerFactory = container.Resolve<IControllerFactory>();
+         var controller = controllerFactory.Create(resourceLog, contentParser, downloaderFactory);
 
-		private static IController Init()
-		{
-			var ioc = new IocRegistrar();
-			ioc.RegisterComponents();
-			var controller = ioc.ResolveController();
-			return controller;
+         // Start
+         controller.Start("http://www.breaks-in-summerland-tenerife.co.uk", false);
 		}
 	}
 }

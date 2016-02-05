@@ -20,3 +20,14 @@ D:\Projects\Link-Checker.NET\Core\bin\Debug\Castle.Windsor.xml
 D:\Projects\Link-Checker.NET\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 D:\Projects\Link-Checker.NET\Core\obj\Debug\Netricity.LinkChecker.Core.dll
 D:\Projects\Link-Checker.NET\Core\obj\Debug\Netricity.LinkChecker.Core.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Netricity.Linkspector.Core.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Netricity.Linkspector.Core.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Castle.Core.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Castle.Windsor.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Netricity.Common.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Castle.Core.xml
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Castle.Windsor.xml
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\bin\Debug\Netricity.Common.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\obj\Debug\Netricity.Linkspector.Core.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\obj\Debug\Netricity.Linkspector.Core.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache

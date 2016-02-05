@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public class ResourceLog : IResourceLog
 	{
@@ -46,10 +46,16 @@ namespace Netricity.LinkChecker.Core
 			}
 		}
 
-		public string FetchNextPendingUrl()
-		{
-			throw new NotImplementedException();
-		}
+      public IUrl2 FetchNextPendingUrl()
+      {
+         foreach (var entry in this.Items)
+         {
+            if (entry.Status == "pending")
+               return entry.Url;
+         }
+
+         return null;
+      }
 
 		public IResource FindItem(IUrl2 url)
 		{

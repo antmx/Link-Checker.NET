@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public class Controller : IController
 	{
-		public Controller(IResourceLog resourceLog, IContentParser contentParser, IDownloader downloader)
+		public Controller(IResourceLog resourceLog, IContentParser contentParser, IDownloaderFactory downloaderFactory)
 		{
 			this.ResourceLog = resourceLog;
 			this.ContentParser = contentParser;
-			this.Downloader = downloader;
+			this.DownloaderFactory = downloaderFactory;
 		}
 
 		public void Start(string startUrl, bool caseSensitive)
@@ -17,8 +17,41 @@ namespace Netricity.LinkChecker.Core
 			this.ResourceLog.CaseSensitive = caseSensitive;
 			this.ResourceLog.AddItem(url);
 
-
+         ProcessUrl(url);
 		}
+
+		public void ProcessNext()
+		{
+         //throw new NotImplementedException();
+         if (this.CurrentProcesses < this.MaxProcesses)
+         {
+            var nextUrl = this.ResourceLog.FetchNextPendingUrl();
+
+            if (nextUrl != null)
+            {
+               this.ProcessUrl(nextUrl);
+               this.CurrentProcesses += 1;
+            }
+         }
+      }
+
+      public void ProcessUrl(IUrl2 url)
+      {
+         var resource = this.ResourceLog.FindItem(url);
+
+         try
+         {
+            if (resource.Status == "pending")
+            {
+               //var downloader=this.DownloaderFactory.Create()
+            }
+         }
+         catch (Exception e)
+         {
+            //resource.Status = xhr.status;
+            //resource.LogStatus = xhr.statusText || "error";
+         }
+      }
 
 		public Uri2 StartUrl { get; set; }
 
@@ -26,12 +59,7 @@ namespace Netricity.LinkChecker.Core
 
 		public IContentParser ContentParser { get; set; }
 
-		public IDownloader Downloader { get; set; }
-
-		public void ProcessNext()
-		{
-			throw new NotImplementedException();
-		}
+		public IDownloaderFactory DownloaderFactory { get; set; }
 
 		public bool IsSuccessHttpStatus(string status)
 		{
@@ -43,8 +71,10 @@ namespace Netricity.LinkChecker.Core
 			throw new NotImplementedException();
 		}
 
-		public int MaxProcesses { get; set; }
+		public int CurrentProcesses { get; set; }
 
-		public event EventHandler OnUpdate;
+      public int MaxProcesses { get; set; }
+
+      public event EventHandler OnUpdate;
 	}
 }

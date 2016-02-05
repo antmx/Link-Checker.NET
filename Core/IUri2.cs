@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public interface IUrl2
 	{

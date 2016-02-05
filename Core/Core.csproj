@@ -7,8 +7,8 @@
     <ProjectGuid>{685A0FFA-7D0E-427C-AAC7-10F53AD1C286}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Netricity.LinkChecker.Core</RootNamespace>
-    <AssemblyName>Netricity.LinkChecker.Core</AssemblyName>
+    <RootNamespace>Netricity.Linkspector.Core</RootNamespace>
+    <AssemblyName>Netricity.Linkspector.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,6 +43,10 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="Netricity.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d2da67d81159359a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Netricity.Common\lib\Netricity.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -53,11 +57,16 @@
   <ItemGroup>
     <Compile Include="ContentParser.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="CustomHttpMessageHandler.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="IContentParser.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IDownloader.cs" />
+    <Compile Include="IControllerFactory.cs" />
+    <Compile Include="IResourceFactory.cs" />
+    <Compile Include="IDownloaderFactory.cs" />
     <Compile Include="IHttpClient.cs" />
+    <Compile Include="IHttpMessageHandler.cs" />
     <Compile Include="IResource.cs" />
     <Compile Include="IResourceLog.cs" />
     <Compile Include="IUri2.cs" />
@@ -71,12 +80,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="StrongName.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{51db0ac7-7328-426b-bd88-8bbff421889c}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

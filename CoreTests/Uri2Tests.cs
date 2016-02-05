@@ -1,6 +1,6 @@
 ﻿using System;
 using Moq;
-using Netricity.LinkChecker.Core;
+using Netricity.Linkspector.Core;
 using NUnit;
 using NUnit.Framework;
 

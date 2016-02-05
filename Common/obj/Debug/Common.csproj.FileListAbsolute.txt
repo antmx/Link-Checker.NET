@@ -7,3 +7,7 @@ D:\Projects\Link-Checker.NET\Common\bin\Debug\Netricity.Common.pdb
 D:\Projects\Link-Checker.NET\Common\obj\Debug\Netricity.Common.dll
 D:\Projects\Link-Checker.NET\Common\obj\Debug\Netricity.Common.pdb
 D:\Projects\Link-Checker.NET\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Common\bin\Debug\Netricity.Common.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Common\bin\Debug\Netricity.Common.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Common\obj\Debug\Netricity.Common.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\Common\obj\Debug\Netricity.Common.pdb

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Netricity.LinkChecker.Core
+namespace Netricity.Linkspector.Core
 {
 	public interface IResource
 	{
@@ -13,9 +13,11 @@ namespace Netricity.LinkChecker.Core
 
 		bool CaseSensitive { get; set; }
 
+      string Content { get; set; }
+
 		string ContentType { get; set; }
 
-		int ContentLength { get; set; }
+		long ContentLength { get; set; }
 
 		string ContentEncoding { get; set; }
 

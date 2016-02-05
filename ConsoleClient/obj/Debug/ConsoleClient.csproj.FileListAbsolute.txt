@@ -26,3 +26,17 @@ D:\Projects\Link-Checker.NET\ConsoleClient\bin\Debug\Castle.Windsor.xml
 D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
 D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.exe
 D:\Projects\Link-Checker.NET\ConsoleClient\obj\Debug\Netricity.LinkChecker.ConsoleClient.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Linkspector.ConsoleClient.exe.config
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Linkspector.ConsoleClient.exe
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Linkspector.ConsoleClient.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Castle.Core.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Castle.Windsor.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Common.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Linkspector.Core.dll
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Linkspector.Core.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Castle.Core.xml
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Castle.Windsor.xml
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\bin\Debug\Netricity.Common.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\obj\Debug\Netricity.Linkspector.ConsoleClient.exe
+C:\Users\Anthony\OneDrive\Documents\Projects\Linkspector.NET\ConsoleClient\obj\Debug\Netricity.Linkspector.ConsoleClient.pdb
