@@ -6,7 +6,7 @@ namespace Netricity.Linkspector.Core
    {
       IResource Create();
 
-      IResource Create(IUrl2 url, bool caseSensitive);
+      IResource Create(IUrl url, bool caseSensitive);
 
       void Release(IResource downloader);
    }

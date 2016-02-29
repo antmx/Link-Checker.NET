@@ -35,7 +35,7 @@ namespace Netricity.Linkspector.Core
          }
       }
 
-      public void ProcessUrl(IUrl2 url)
+      public void ProcessUrl(IUrl url)
       {
          var resource = this.ResourceLog.FindItem(url);
 

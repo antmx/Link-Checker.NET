@@ -5,7 +5,7 @@ namespace Netricity.Linkspector.Core
 {
 	public class Resource : IResource
 	{
-		public Resource(IUrl2 url, bool caseSensitive)
+		public Resource(IUrl url, bool caseSensitive)
 		{
 			this.Url = url;
 			//this.LogStatus = "pending"; // "in progress" | "complete" | "not found" | "timeout"
@@ -38,7 +38,7 @@ namespace Netricity.Linkspector.Core
 			this.DateEnd = null;
 		}
 
-		public IUrl2 Url { get; set; }
+		public IUrl Url { get; set; }
 
 		//public string LogStatus { get; set; }
 		public ResourceStatusEnum ResourceStatus { get; set; }

@@ -10,13 +10,13 @@ namespace Netricity.Linkspector.Core
 
 		ICollection<IResource> Items { get; set; }
 
-		IResource AddItem(IUrl2 url);
+		IResource AddItem(IUrl url);
 
-		void AddItems(IEnumerable<IUrl2> urls);
+		void AddItems(IEnumerable<IUrl> urls);
 
-		IUrl2 FetchNextPendingUrl();
+		IUrl FetchNextPendingUrl();
 
-		IResource FindItem(IUrl2 url);
+		IResource FindItem(IUrl url);
 
 		int ItemCount { get; }
 

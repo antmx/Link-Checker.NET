@@ -6,7 +6,7 @@ namespace Netricity.Linkspector.Core
 	{
 		#region Properties that come from the XHR and its response headers
 
-		IUrl2 Url { get; set; }
+		IUrl Url { get; set; }
 
 		//string LogStatus { get; set; }
 		ResourceStatusEnum ResourceStatus { get; set; }

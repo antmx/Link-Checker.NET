@@ -17,12 +17,12 @@ namespace Netricity.Linkspector.Core
 
 		public ICollection<IResource> Items { get; set; }
 
-		public void AddItems(IEnumerable<IUrl2> urls)
+		public void AddItems(IEnumerable<IUrl> urls)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IResource AddItem(IUrl2 url)
+		public IResource AddItem(IUrl url)
 		{
 			if (url == null)
 				throw new ArgumentNullException("url");
@@ -46,7 +46,7 @@ namespace Netricity.Linkspector.Core
 			}
 		}
 
-      public IUrl2 FetchNextPendingUrl()
+      public IUrl FetchNextPendingUrl()
       {
          foreach (var entry in this.Items)
          {
@@ -57,7 +57,7 @@ namespace Netricity.Linkspector.Core
          return null;
       }
 
-		public IResource FindItem(IUrl2 url)
+		public IResource FindItem(IUrl url)
 		{
 			var existing = this.Items
 				//.Where(r => r.Url.IsEqualTo(url, this.CaseSensitive))

@@ -2,7 +2,7 @@
 
 namespace Netricity.Linkspector.Core
 {
-	public class Uri2 : Uri, IUrl2
+	public class Uri2 : Uri, IUrl
 	{
 		public Uri2(string uriString)
 			: base(uriString)
@@ -35,7 +35,7 @@ namespace Netricity.Linkspector.Core
 			this.Origin = Scheme + (Scheme != "" || Host != "" ? "//" : "") + Host;
 		}
 
-		public bool IsEqualTo(IUrl2 other, bool caseSensitive)
+		public bool IsEqualTo(IUrl other, bool caseSensitive)
 		{
 			if (other == null)
 				return false;

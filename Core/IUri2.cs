@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Netricity.Linkspector.Core
 {
-	public interface IUrl2
+	public interface IUrl
 	{
 		#region Properties
 
@@ -33,7 +33,7 @@ namespace Netricity.Linkspector.Core
 
 		#region Methods
 
-		bool IsEqualTo(IUrl2 other, bool caseSensitive);
+		bool IsEqualTo(IUrl other, bool caseSensitive);
 
 		#endregion
 	}
