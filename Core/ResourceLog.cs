@@ -7,7 +7,7 @@ namespace Netricity.Linkspector.Core
 	public class ResourceLog : IResourceLog
 	{
 		//public ResourceLog(bool caseSensitive)
-		public ResourceLog()
+		public ResourceLog(IResourceFactory resourceFactory)
 		{
 			this.Items = new List<IResource>();
 			//this.CaseSensitive = caseSensitive;
@@ -17,7 +17,9 @@ namespace Netricity.Linkspector.Core
 
 		public ICollection<IResource> Items { get; set; }
 
-		public void AddItems(IEnumerable<IUrl> urls)
+      public IResourceFactory ResourceFactory { get; set; }
+
+      public void AddItems(IEnumerable<IUrl> urls)
 		{
 			throw new NotImplementedException();
 		}
@@ -37,9 +39,10 @@ namespace Netricity.Linkspector.Core
 			}
 			else
 			{
-				// Add new item
-				var newItem = new Resource(url, this.CaseSensitive);
-				newItem.InLinks = this.ItemCount == 0 ? 0 : 1;
+            // Add new item
+            var newItem = ResourceFactory.Create(url, CaseSensitive);
+
+            newItem.InLinks = this.ItemCount == 0 ? 0 : 1;
 				this.Items.Add(newItem);
 
 				return newItem;

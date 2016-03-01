@@ -5,9 +5,7 @@ namespace Netricity.Linkspector.Core
 {
    public interface IControllerFactory
    {
-      IDownloader Create();
-
-      IController Create(IResourceLog resourceLog, IContentParser contentParser, IDownloaderFactory downloaderFactory);
+      IController Create(IResourceLog resourceLog, IContentParserFactory contentParserFactory, IDownloaderFactory downloaderFactory);
 
       void Release(IController downloader);
    }

@@ -57,14 +57,16 @@
   <ItemGroup>
     <Compile Include="ContentParser.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="ControllerFactory.cs" />
     <Compile Include="CustomHttpMessageHandler.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="IContentParser.cs" />
+    <Compile Include="IContentParserFactory.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IDownloader.cs" />
     <Compile Include="IControllerFactory.cs" />
-    <Compile Include="IResourceFactory.cs" />
     <Compile Include="IDownloaderFactory.cs" />
+    <Compile Include="IResourceFactory.cs" />
     <Compile Include="IHttpClient.cs" />
     <Compile Include="IHttpMessageHandler.cs" />
     <Compile Include="IResource.cs" />

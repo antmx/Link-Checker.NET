@@ -4,10 +4,10 @@ namespace Netricity.Linkspector.Core
 {
 	public class Controller : IController
 	{
-		public Controller(IResourceLog resourceLog, IContentParser contentParser, IDownloaderFactory downloaderFactory)
+		public Controller(IResourceLog resourceLog, IContentParserFactory contentParserFactory, IDownloaderFactory downloaderFactory)
 		{
 			this.ResourceLog = resourceLog;
-			this.ContentParser = contentParser;
+			this.ContentParserFactory = contentParserFactory;
 			this.DownloaderFactory = downloaderFactory;
 		}
 
@@ -41,9 +41,10 @@ namespace Netricity.Linkspector.Core
 
          try
          {
-            if (resource.Status == "pending")
+            if (resource.Status != "pending")
             {
-               //var downloader=this.DownloaderFactory.Create()
+               var downloader = this.DownloaderFactory.Create();
+               var parser = this.ContentParserFactory.Create();
             }
          }
          catch (Exception e)
@@ -57,7 +58,7 @@ namespace Netricity.Linkspector.Core
 
 		public IResourceLog ResourceLog { get; set; }
 
-		public IContentParser ContentParser { get; set; }
+		public IContentParserFactory ContentParserFactory { get; set; }
 
 		public IDownloaderFactory DownloaderFactory { get; set; }
 

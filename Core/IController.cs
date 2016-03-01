@@ -8,7 +8,7 @@ namespace Netricity.Linkspector.Core
 
 		IResourceLog ResourceLog { get; set; }
 
-		IContentParser ContentParser { get; set; }
+		IContentParserFactory ContentParserFactory { get; set; }
 
 		IDownloaderFactory DownloaderFactory { get; set; }
 
